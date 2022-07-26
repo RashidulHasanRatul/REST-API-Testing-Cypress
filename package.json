@@ -1,0 +1,14 @@
+{
+  "name": "rest-api-testing-cypress",
+  "version": "1.0.0",
+  "description": "REST API Testing using Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rashidul Hasan",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.3.1"
+  }
+}
