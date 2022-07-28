@@ -18,6 +18,8 @@ describe("Create User API Test", () => {
         status: "active",
       },
     }).then((response) => {
+      cy.writeFile("cypress/fixtures/createdUser.json", response.body);
+    
       //cy.log(JSON.stringify(response));
       expect(response.status).to.eq(201);
       expect(response.body.email).to.eq(UniqueEmail);
