@@ -3,8 +3,9 @@
 describe("Update the User", () => {
   let UniqueEmail = "test" + Math.random() + "@gmail.com";
   let name = "Rashidul Hasan";
-  let UpdateName = "Rashidul Hasan Updated";
+  let UpdateName = "Rashidul Hasan Updated2";
   let userID = "";
+  let updateEmail = "updateEmail" + Math.random() + "@gmail.com";
   it("Create the User", () => {
     cy.request({
       method: "POST",
@@ -43,7 +44,7 @@ describe("Update the User", () => {
       },
       body: {
         name: UpdateName,
-        email: UniqueEmail,
+        email: updateEmail,
         gender: "female",
         status: "active",
       },
@@ -70,7 +71,7 @@ describe("Update the User", () => {
     }).then((response) => {
       cy.log(response.body.id);
       expect(response.status).to.eq(200);
-      expect(response.body.name).to.eq(name);
+      expect(response.body.name).to.eq(UpdateName);
       cy.log(response.body.name);
     });
   });
